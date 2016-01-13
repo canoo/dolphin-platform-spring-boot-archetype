@@ -9,6 +9,18 @@
         <include>readme.md</include>
       </includes>
     </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>polymer-client</directory>
+      <includes>
+        <include>bower.json</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="false" encoding="UTF-8">
+      <directory>polymer-client</directory>
+      <includes>
+        <include>**/*</include>
+      </includes>
+    </fileSet>
   </fileSets>
   <modules>
     <module id="common" dir="common" name="common">

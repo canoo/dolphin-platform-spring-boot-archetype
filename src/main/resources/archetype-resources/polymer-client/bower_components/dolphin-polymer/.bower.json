@@ -1,0 +1,47 @@
+{
+  "name": "dolphin-polymer",
+  "version": "0.7.0",
+  "authors": [
+    "Michael Heinrichs <michael.heinrichs@canoo.com>"
+  ],
+  "homepage": "http://www.dolphin-platform.io",
+  "description": "The Dolphin Platform is a framework that implements the presentation model pattern and provides a modern way to create enterprise applications. The Platform provides several client implementations that all can be used in combination with a general sever API.",
+  "keywords": [
+    "Dolphin Platform"
+  ],
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "main": "./dist/dolphin-polymer.min.js",
+  "ignore": [
+    "**/.*",
+    "lib",
+    "src",
+    "test",
+    "gulpfile.js",
+    "karma.conf.js",
+    "package.json",
+    "sauce.launchers.js",
+    "sauce-template.json"
+  ],
+  "devDependencies": {
+    "core.js": "~1.2.6",
+    "dolphin-js": "~0.7.0"
+  },
+  "dependencies": {
+    "polymer": "~1.1.5",
+    "open-dolphin-js": "~0.0.2"
+  },
+  "_release": "0.7.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.7.0",
+    "commit": "7a99ac1f56d6599d8cdfb6fc04f3a65b065f69eb"
+  },
+  "_source": "git://github.com/canoo/dolphin-platform-polymer.git",
+  "_target": "0.7.0",
+  "_originalSource": "dolphin-polymer"
+}
