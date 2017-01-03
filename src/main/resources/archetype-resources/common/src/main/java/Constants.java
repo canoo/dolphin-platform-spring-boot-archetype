@@ -14,4 +14,9 @@ public class Constants {
      */
     public final static String CONTROLLER_NAME = "MyController";
 
+    /**
+     * Defines the name of the reset action in a MyController instance that can be triggered from the client
+     */
+    public final static String RESET_ACTION = "reset";
+
 }

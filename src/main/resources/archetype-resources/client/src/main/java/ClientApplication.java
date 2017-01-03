@@ -1,54 +1,42 @@
+
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
 package ${package};
 
-import com.canoo.dolphin.${artifactId}.ClientConfiguration;
-import com.canoo.dolphin.${artifactId}.ClientContext;
-import com.canoo.dolphin.${artifactId}.ClientContextFactory;
-import com.canoo.dolphin.${artifactId}.javafx.JavaFXConfiguration;
-import ${package}.view.MyViewBinder;
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
+import com.canoo.dolphin.client.ClientContext;
+import com.canoo.dolphin.client.javafx.DolphinPlatformApplication;
+import ${package}.view.MyView;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 /**
  * Main class for the JavaFX client
- * In this clas sthe global Dolphin Platform {@link ClientContext} is created. This context defines the central communication
- * between client and server. It's configured by using http://localhost:8080/dolphin as the server endpoint that is the
- * default Dolphin Platform endpoint.
- * In the start method a new view is created. Here the UI of the view is defined in a FXML file (view.fxml) and the
- * MyViewBinder class is used as client side controller for the view. Internally this class don't contain any controller
- * logic and only binds the given UI to Dolphin Platform and the controller instance on the server.
+ * In this class the Dolphin Platform {@link ClientContext} is created automatically. This behavior is defined in the
+ * super class {@link DolphinPlatformApplication}. A {@link ClientContext} defines the connection between the client and
+ * the server. To define such a connection the abstract {@link DolphinPlatformApplication#getServerEndpoint} method must
+ * be overridden.
+ * In the start method a new view is created. Here a new instance of {@link MyView} is created. This project specific
+ * class defines the view that is bound to an instance of the controller "MyController" on the Server. For more details
+ * see the documentation of {@link MyView}.
+ *
+ * The {@link DolphinPlatformApplication} class uses the default JavaFX lifecycle internally. For more information read
+ * the documentation of {@link javafx.application.Application}
  */
-public class ClientApplication extends Application {
-
-    /**
-     * Defines the global Dolphin Platform Connection
-     */
-    private ClientContext clientContext;
+public class ClientApplication extends DolphinPlatformApplication {
 
     @Override
-    public void init() throws Exception {
-        //Creates a configuration for the Dolphin Platform. Here the server endpoint is configured
-        ClientConfiguration config = new JavaFXConfiguration("http://localhost:8080/dolphin");
-
-        //Creates the global client context based on the configuration
-        clientContext = ClientContextFactory.connect(config).get();
+    protected URL getServerEndpoint() throws MalformedURLException {
+        return new URL("http://localhost:8080/dolphin");
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        //Loads the view based on a FXML file
-        FXMLLoader loader = new FXMLLoader(ClientApplication.class.getResource("view.fxml"));
-
-        //Defines the FXML controller for the view. In this case the controller defines all the bindings
-        //between the view and the synchronized Dolphin Platform model.
-        loader.setController(new MyViewBinder(clientContext));
-
-        //Shows the JavaFX client on the screen
-        Scene scene = new Scene(loader.load());
+    protected void start(Stage primaryStage, ClientContext clientContext) throws Exception {
+        MyView view = new MyView(clientContext);
+        Scene scene = new Scene(view.getParent());
         primaryStage.setScene(scene);
         primaryStage.show();
     }

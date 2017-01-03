@@ -47,7 +47,7 @@ public class MyController {
      * annotation the method name will be used. This means that this method can be triggered by calling a "reset" action
      * on the client.
      */
-    @DolphinAction
+    @DolphinAction(Constants.RESET_ACTION)
     public void reset() {
         model.setValue(null);
     }

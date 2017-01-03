@@ -3,23 +3,27 @@
 #set( $symbol_escape = '\' )
 package ${package}.view;
 
-import ${package}.Constants;
-import ${package}.model.MyModel;
-import com.canoo.dolphin.${artifactId}.ClientContext;
-import com.canoo.dolphin.${artifactId}.javafx.AbstractViewBinder;
-import com.canoo.dolphin.${artifactId}.javafx.FXBinder;
+import com.canoo.dolphin.client.ClientContext;
+import com.canoo.dolphin.client.javafx.binding.FXBinder;
+import com.canoo.dolphin.client.javafx.view.AbstractFXMLViewBinder;
+import com.canoo.dolphin.client.javafx.view.AbstractViewBinder;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
+import ${package}.Constants;
+import ${package}.model.MyModel;
+
+
 /**
- * This class binds a view isnatnce that is created based on the view.fxml (see ClientApplication class).
- * The class extends the {@link AbstractViewBinder} class that is part of the basic DOlphin Platform JavaFX client API and
+ * This class binds a view instance that is created based on the view.fxml FXML file.
+ * The class extends the {@link AbstractFXMLViewBinder} class that is part of the basic Dolphin Platform JavaFX client API and
  * already defines the lifecycle of the view and offers several properties and features. When extending this class normally
  * only the init() method need to be defined. Here all the UI components should be bound to the model taht is synchronized
  * between client and server.
  */
-public class MyViewBinder extends AbstractViewBinder<MyModel> {
+public class MyView extends AbstractFXMLViewBinder<MyModel> {
 
     /**
      * This UI control is automatically injected by FXML
@@ -34,14 +38,16 @@ public class MyViewBinder extends AbstractViewBinder<MyModel> {
     private Button resetButton;
 
     /**
-     * The constructor calls the super constructor taht initializes the view lifecycle that is defined by Dolphin Platform.
+     * The constructor calls the super constructor that initializes the view lifecycle that is defined by Dolphin Platform.
      * This will automatically create a controller instance on the server. In addition the model of this MVC group will
-     * be created and synchronized between client and server.
+     * be created and synchronized between client and server. The layout of the view is defined by the FXML file "view.fxml".
+     * The superclass {@link AbstractFXMLViewBinder} will automatically load the given FXML file and render the layout.
      * @param clientContext the global client context
      */
-    public MyViewBinder(ClientContext clientContext) {
-        super(clientContext, Constants.CONTROLLER_NAME);
+    public MyView(ClientContext clientContext) {
+        super(clientContext, Constants.CONTROLLER_NAME, MyView.class.getResource("view.fxml"));
     }
+
 
     /**
      * This method is called when the Dolphin Platform bootstrap for the view is finished. This means that a controller
@@ -56,6 +62,6 @@ public class MyViewBinder extends AbstractViewBinder<MyModel> {
         FXBinder.bind(valueField.textProperty()).bidirectionalTo(getModel().valueProperty());
 
         // pressing the button will invoke the reset action on the controller instance on the server
-        resetButton.setOnAction(e -> invoke("reset"));
+        resetButton.setOnAction(e -> invoke(Constants.RESET_ACTION));
     }
 }
