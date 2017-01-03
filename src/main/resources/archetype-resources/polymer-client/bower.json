@@ -9,16 +9,7 @@
     "tests"
   ],
   "dependencies": {
-    "iron-elements": "PolymerElements/iron-elements#1.0.3",
-    "iron-selector": "PolymerElements/iron-selector#1.0.7",
-    "paper-input": "PolymerElements/paper-input#1.0.16",
-    "paper-elements": "PolymerElements/paper-elements#1.0.4",
-    "neon-elements": "PolymerElements/neon-elements#1.0.0",
-    "polymer-theme": "0.5.1",
-    "paper-listbox": "polymerelements/paper-listbox#1.0.0",
-    "dolphin-polymer": "0.7.0"
-  },
-  "resolutions": {
-    "polymer": "1.1.5"
+    "paper-elements": "PolymerElements/paper-elements#1.0.x",
+    "dolphin-polymer": "0.8.9"
   }
 }

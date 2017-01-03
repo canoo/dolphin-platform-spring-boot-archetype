@@ -33,8 +33,6 @@
     <link rel="import" href="bower_components/paper-styles/paper-styles.html">
     <link rel="import" href="bower_components/font-roboto/roboto.html">
     <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
-    <link rel="import" href="my-view.html">
-
 
     <style>
         body {
@@ -42,7 +40,12 @@
         }
     </style>
 
-
+    <script src="bower_components/open-dolphin-js/dist/opendolphin.js"></script>
+    <script src="bower_components/dolphin-polymer/dist/dolphin-polymer.js"></script>
+    <script>
+        clientContext = dolphin.connect('http://localhost:8080/dolphin');
+    </script>
+    <link rel="import" href="my-view.html">
 </head>
 <body class="fullbleed layout vertical">
 <my-view></my-view>
