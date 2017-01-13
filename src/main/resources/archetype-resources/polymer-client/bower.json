@@ -1,6 +1,5 @@
 {
   "name": "${artifactId}",
-  "version": "${version}",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -10,6 +9,6 @@
   ],
   "dependencies": {
     "paper-elements": "PolymerElements/paper-elements#1.0.x",
-    "dolphin-polymer": "0.8.9"
+    "dolphin-platform-polymer": "0.8.10"
   }
 }
