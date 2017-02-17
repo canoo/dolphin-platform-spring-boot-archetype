@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+
+<!-- Angular  -->
+<script src="bower_components/angular/angular.min.js"></script>
+
+
+<!-- Dolphin-Platform  -->
+<script src="bower_components/dolphin-platform-angularjs/dist/dolphin-platform-angular.min.js"></script>
+<bod>
+    <script>
+        var app = angular.module('JumpStartApplication', ['DolphinPlatform']).config(function ($dolphinConfigProvider) {
+            $dolphinConfigProvider.configure({
+                DOLPHIN_URL: 'http://localhost:8080/dolphin'
+            });
+        });
+    </script>
+</bod>
+<style>
+
+    .container {
+        margin: 32px;
+    }
+</style>
+<div ng-app="JumpStartApplication" ng-controller="JumpStartController">
+    <div class="container">
+        <div class="row">
+            <div class="form-group">
+                <input type="text" ng-model="model.value" class="form-control input-lg" placeholder="Value">
+            </div>
+        </div>
+
+        <div class="row">
+            <button type="submit" ng-click="reset()" class="btn btn-default">RESET</button>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    app.controller('JumpStartController', function ($scope, clientContext) {
+
+        clientContext.createController($scope, 'MyController').then(function (controllerProxy) {
+
+            $scope.$apply(function () {
+                $scope.model.newItemText = '';
+            });
+
+            $scope.reset = function () {
+                controllerProxy.invoke('reset');
+            };
+        });
+
+    });
+</script>
+</html>

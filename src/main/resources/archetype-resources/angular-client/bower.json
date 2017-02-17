@@ -1,0 +1,14 @@
+{
+  "name": "${artifactId}",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "dolphin-platform-angularjs": "0.8.12",
+    "bootstrap": "^3.3.7"
+  }
+}
