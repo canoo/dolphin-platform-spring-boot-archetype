@@ -8,7 +8,7 @@
     "tests"
   ],
   "dependencies": {
-    "dolphin-platform-angularjs": "0.9.0",
+    "dolphin-platform-angularjs": "0.10.0",
     "bootstrap": "^3.3.7"
   }
 }

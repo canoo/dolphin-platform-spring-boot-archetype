@@ -1,6 +1,7 @@
 <p align="right">
 <a href="http://www.canoo.com"><img src="http://www.guigarage.com/wordpress/wp-content/uploads/2016/08/canoo_support.png"/></a>
 </p>
+
 # Dolphin Platform AngularJS client API [![Build Status](https://travis-ci.org/canoo/dolphin-platform-angularjs.svg?branch=master)](https://travis-ci.org/canoo/dolphin-platform-angularjs)
                                                                                                                                
 This repository contains all sources of the Dolphin Platform AngularJS client library. The general JS API can be found [in a seperate repository](https://github.com/canoo/dolphin-platform-js). The Java server and client sources can be found [here](https://github.com/canoo/dolphin-platform).
