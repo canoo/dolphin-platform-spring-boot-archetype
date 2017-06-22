@@ -6,6 +6,7 @@ package ${package}.model;
 import com.canoo.dolphin.mapping.DolphinBean;
 import com.canoo.dolphin.mapping.Property;
 
+
 /**
  * Defines the model of the MVC that is defined in this example. When using Dolphin Platform a view-controller-pair will
  * share one model that is automatially synchronized between the view on the client and teh controller on the server.

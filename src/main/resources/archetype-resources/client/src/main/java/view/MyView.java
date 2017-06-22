@@ -3,10 +3,9 @@
 #set( $symbol_escape = '\' )
 package ${package}.view;
 
-import com.canoo.dolphin.client.ClientContext;
-import com.canoo.dolphin.client.javafx.binding.FXBinder;
-import com.canoo.dolphin.client.javafx.view.AbstractFXMLViewBinder;
-import com.canoo.dolphin.client.javafx.view.AbstractViewBinder;
+import com.canoo.platform.client.ClientContext;
+import com.canoo.platform.client.javafx.FXBinder;
+import com.canoo.platform.client.javafx.view.AbstractFXMLViewBinder;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

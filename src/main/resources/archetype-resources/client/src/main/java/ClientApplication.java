@@ -4,8 +4,8 @@
 #set( $symbol_escape = '\' )
 package ${package};
 
-import com.canoo.dolphin.client.ClientContext;
-import com.canoo.dolphin.client.javafx.DolphinPlatformApplication;
+import com.canoo.platform.client.ClientContext;
+import com.canoo.platform.client.javafx.DolphinPlatformApplication;
 import ${package}.view.MyView;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

@@ -3,12 +3,11 @@
 #set( $symbol_escape = '\' )
 package ${package}.controller;
 
-import com.canoo.dolphin.${artifactId}.DolphinAction;
-import com.canoo.dolphin.${artifactId}.DolphinController;
-import com.canoo.dolphin.${artifactId}.DolphinModel;
 import ${package}.Constants;
 import ${package}.model.MyModel;
-
+import com.canoo.platform.server.DolphinAction;
+import com.canoo.platform.server.DolphinController;
+import com.canoo.platform.server.DolphinModel;
 import javax.annotation.PostConstruct;
 
 /**
