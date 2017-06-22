@@ -42,7 +42,12 @@
 
     <script src="bower_components/dolphin-platform-polymer/dist/dolphin-platform-polymer.js"></script>
     <script>
-        clientContext = dolphin.connect('http://localhost:8080/dolphin');
+        clientContext = dolphin.clientContext('http://localhost:8080/dolphin');
+        clientContext.onConnect().then(function() {
+            console.log('Dolphin connected...');
+        }, function(error){
+            console.log('error', error);
+        });
     </script>
     <link rel="import" href="my-view.html">
 </head>
