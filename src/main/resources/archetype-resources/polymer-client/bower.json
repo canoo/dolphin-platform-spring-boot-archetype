@@ -9,6 +9,6 @@
   ],
   "dependencies": {
     "paper-elements": "PolymerElements/paper-elements#1.0.x",
-    "dolphin-platform-polymer": "0.15.0"
+    "dolphin-platform-polymer": "0.16.0"
   }
 }
