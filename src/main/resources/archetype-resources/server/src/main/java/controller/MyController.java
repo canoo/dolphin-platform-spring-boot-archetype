@@ -3,9 +3,9 @@
 #set( $symbol_escape = '\' )
 package ${package}.controller;
 
-import com.canoo.dolphin.${artifactId}.DolphinAction;
-import com.canoo.dolphin.${artifactId}.DolphinController;
-import com.canoo.dolphin.${artifactId}.DolphinModel;
+import com.canoo.platform.remoting.${artifactId}.RemotingAction;
+import com.canoo.platform.remoting.${artifactId}.RemotingController;
+import com.canoo.platform.remoting.${artifactId}.RemotingModel;
 import ${package}.Constants;
 import ${package}.model.MyModel;
 
@@ -18,7 +18,7 @@ import javax.annotation.PostConstruct;
  * The {@link DolphinController} annotation defines the unique name of this controller type. In this sample a static
  * constant is used for the name that is shared with the JavaFX client.
  */
-@DolphinController(Constants.CONTROLLER_NAME)
+@RemotingController(Constants.CONTROLLER_NAME)
 public class MyController {
 
     /**
@@ -26,7 +26,7 @@ public class MyController {
      * and before the init() method (annotated with {@link PostConstruct}) is called the model will be injected in the
      * controller.
      */
-    @DolphinModel
+    @RemotingModel
     private MyModel model;
 
     /**
@@ -47,7 +47,7 @@ public class MyController {
      * annotation the method name will be used. This means that this method can be triggered by calling a "reset" action
      * on the client.
      */
-    @DolphinAction(Constants.RESET_ACTION)
+    @RemotingAction(Constants.RESET_ACTION)
     public void reset() {
         model.setValue(null);
     }

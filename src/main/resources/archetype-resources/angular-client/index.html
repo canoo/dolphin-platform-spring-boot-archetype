@@ -39,7 +39,7 @@
 </div>
 <script>
     app.controller('JumpStartController', function ($scope, clientContext) {
-
+        clientContext.connect();
         clientContext.createController($scope, 'MyController').then(function (controllerProxy) {
 
             $scope.$apply(function () {

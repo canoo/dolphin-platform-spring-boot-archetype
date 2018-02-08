@@ -1,33 +1,59 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="import" href="bower_components/paper-input/paper-input.html">
-    <link rel="import" href="bower_components/paper-button/paper-button.html">
-    <link rel="import" href="bower_components/paper-material/paper-material.html">
-</head>
+<link rel="import" href="bower_components/polymer/polymer-element.html">
+<link rel="import" href="bower_components/dolphin-platform-polymer/dolphin-controller.html">
+<link rel="import" href="bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="bower_components/paper-button/paper-button.html">
+<link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="bower_components/paper-input/paper-input.html">
+<link rel="import" href="bower_components/paper-item/paper-item.html">
+<link rel="import" href="bower_components/paper-item/paper-item-body.html">
 <dom-module id="my-view">
     <template>
-        <style is="custom-style">
-            paper-material {
-                background: white;
-                margin: 12px;
-                padding: 12px;
-                border-radius: 2px;
+        <style>
+            paper-button.colorful {
+                color: #4285f4;
             }
-        </style>
-            <paper-material>
-                <paper-input label="Value" value="{{model.value}}"></paper-input>
-                <paper-button raised on-click="reset">reset</paper-button>
-            </paper-material>
-    </template>
-</dom-module>
 
-<script>
-    Polymer({
-        is: "my-view",
-        behaviors: [clientContext.createBehavior('MyController')],
-        reset: function() {
-            this.invoke('reset');
+            paper-button[raised].colorful {
+                background: #4285f4;
+                color: #fff;
+            }
+
+            .input-form {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+            .text-input {
+                max-width: 100%;
+                flex-grow: 1;
+            }
+
+        </style>
+        <dolphin-controller id="controller" name="MyController" model="{{model}}">
+        </dolphin-controller>
+
+        <div class="layout center-justified">
+            <div class="input-form">
+                <paper-input class="text-input" label="Value" value="{{model.value}}"></paper-input>
+                <paper-button raised  class="colorful" on-tap="_reset">reset</paper-button>
+            </div>
+        </div>
+    </template>
+
+
+    <script>
+        class MyView extends Polymer.Element {
+            static get is() {
+                return "my-view";
+            }
+
+            _reset() {
+                this.$.controller.invoke("reset");
+            }
         }
-    });
-</script>
+
+        window.customElements.define(MyView.is, MyView);
+    </script>
+</dom-module>

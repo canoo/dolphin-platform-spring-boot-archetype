@@ -22,6 +22,8 @@ By doing so you can create enterprise application with a single server and sever
 
 The Server sources of the Dolphin Platform can be found [here](https://github.com/canoo/dolphin-platform). 
 
+The documentation for AngularJS client integration can be found [here](https://canoo.github.io/dolphin-platform/#_the_angularjs_client_integration).
+
 For more information read the [documentation](https://canoo.github.io/dolphin-platform/) of the Dolphin Platform.
 
 ## Issue Tracking

@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.canoo.dolphin-platform</groupId>
-            <artifactId>dolphin-platform-core</artifactId>
+            <artifactId>dolphin-platform-remoting-common</artifactId>
             <version>${dolphin-platform.version}</version>
         </dependency>
     </dependencies>

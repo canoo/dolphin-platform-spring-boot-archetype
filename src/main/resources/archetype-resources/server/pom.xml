@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.canoo.dolphin-platform</groupId>
-            <artifactId>dolphin-platform-server-spring</artifactId>
+            <artifactId>dolphin-platform-remoting-server-spring</artifactId>
             <version>${dolphin-platform.version}</version>
         </dependency>
         <dependency>
