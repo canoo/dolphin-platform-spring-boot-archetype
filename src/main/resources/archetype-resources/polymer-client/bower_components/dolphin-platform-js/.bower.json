@@ -1,6 +1,6 @@
 {
   "name": "dolphin-platform-js",
-  "version": "1.0.0-CR.2",
+  "version": "1.0.0-CR.4",
   "main": "./dist/dolphin-platform.js",
   "homepage": "http://www.dolphin-platform.io",
   "authors": [
@@ -35,13 +35,13 @@
   "devDependencies": {
     "core.js": "2.4.x"
   },
-  "_release": "1.0.0-CR.2",
+  "_release": "1.0.0-CR.4",
   "_resolution": {
     "type": "version",
-    "tag": "1.0.0-CR.2",
-    "commit": "d6ffcc23a7caf2713a5bc8b233aa6e0cfc3a8f1a"
+    "tag": "1.0.0-CR.4",
+    "commit": "5ceea7fc458a3038db0d5c559cf535b650e54a5c"
   },
   "_source": "https://github.com/canoo/dolphin-platform-js.git",
-  "_target": "1.0.0-CR.2",
+  "_target": "1.0.0-CR.4",
   "_originalSource": "dolphin-platform-js"
 }

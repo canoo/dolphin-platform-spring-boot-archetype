@@ -1,5 +1,5 @@
 {
-  "name": "${artifactId}",
+  "name": "TestLatestArchetypeProj",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -8,7 +8,7 @@
     "tests"
   ],
   "dependencies": {
-    "dolphin-platform-polymer": "canoo/dolphin-platform-polymer#1.0.0-CR.2",
+    "dolphin-platform-polymer": "1.0.0-CR.4",
     "font-roboto": "PolymerElements/font-roboto-local#^1.0.1",
     "iron-icon": "PolymerElements/iron-icon#^2.0.1",
     "iron-icons": "PolymerElements/iron-icons#^2.0.1",
