@@ -1,11 +1,10 @@
-
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
 package ${package};
 
-import com.canoo.platform.client.ClientContext;
-import com.canoo.platform.client.javafx.DolphinPlatformApplication;
+import com.canoo.platform.remoting.client.ClientContext;
+import com.canoo.platform.remoting.client.javafx.DolphinPlatformApplication;
 import ${package}.view.MyView;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

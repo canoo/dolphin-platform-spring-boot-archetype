@@ -1,4 +1,7 @@
-package com.test.dolphin.view;
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package ${package}.view;
 
 import com.canoo.platform.remoting.client.ClientContext;
 import com.canoo.platform.remoting.client.javafx.FXBinder;
@@ -8,8 +11,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-import com.test.dolphin.Constants;
-import com.test.dolphin.model.MyModel;
+import ${package}.Constants;
+import ${package}.model.MyModel;
 
 
 /**
