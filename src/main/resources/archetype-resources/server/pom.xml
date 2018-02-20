@@ -14,19 +14,13 @@
     <dependencies>
         <dependency>
             <groupId>com.canoo.dolphin-platform</groupId>
-            <artifactId>dolphin-platform-server-spring</artifactId>
+            <artifactId>dolphin-platform-remoting-server-spring</artifactId>
             <version>${dolphin-platform.version}</version>
         </dependency>
         <dependency>
             <groupId>${groupId}</groupId>
             <artifactId>common</artifactId>
             <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.canoo.dolphin-platform</groupId>
-            <artifactId>dolphin-platform-spring-controller-tester</artifactId>
-            <version>${dolphin-platform.version}</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 
