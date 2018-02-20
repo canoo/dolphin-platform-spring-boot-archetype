@@ -3,8 +3,8 @@
 #set( $symbol_escape = '\' )
 package ${package}.model;
 
-import com.canoo.dolphin.mapping.DolphinBean;
-import com.canoo.dolphin.mapping.Property;
+import com.canoo.platform.remoting.RemotingBean;
+import com.canoo.platform.remoting.Property;
 
 
 /**
@@ -18,7 +18,7 @@ import com.canoo.dolphin.mapping.Property;
  * model. By doing so a hierarchy can be defined. In addition Dolphin Platform contains extensions for the Java
  * collections API like an observable list. This types can be used in model classes, too.
  */
-@DolphinBean
+@RemotingBean
 public class MyModel {
 
     /**

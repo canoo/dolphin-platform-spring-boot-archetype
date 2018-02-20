@@ -1,28 +1,25 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
-package ${package}.view;
+package com.test.dolphin.view;
 
-import com.canoo.platform.client.ClientContext;
-import com.canoo.platform.client.javafx.FXBinder;
-import com.canoo.platform.client.javafx.view.AbstractFXMLViewBinder;
+import com.canoo.platform.remoting.client.ClientContext;
+import com.canoo.platform.remoting.client.javafx.FXBinder;
+import com.canoo.platform.remoting.client.javafx.view.AbstractFXMLViewController;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-import ${package}.Constants;
-import ${package}.model.MyModel;
+import com.test.dolphin.Constants;
+import com.test.dolphin.model.MyModel;
 
 
 /**
  * This class binds a view instance that is created based on the view.fxml FXML file.
- * The class extends the {@link AbstractFXMLViewBinder} class that is part of the basic Dolphin Platform JavaFX client API and
+ * The class extends the {@link AbstractFXMLViewController} class that is part of the basic Dolphin Platform JavaFX client API and
  * already defines the lifecycle of the view and offers several properties and features. When extending this class normally
  * only the init() method need to be defined. Here all the UI components should be bound to the model taht is synchronized
  * between client and server.
  */
-public class MyView extends AbstractFXMLViewBinder<MyModel> {
+public class MyView extends AbstractFXMLViewController<MyModel> {
 
     /**
      * This UI control is automatically injected by FXML
@@ -40,7 +37,7 @@ public class MyView extends AbstractFXMLViewBinder<MyModel> {
      * The constructor calls the super constructor that initializes the view lifecycle that is defined by Dolphin Platform.
      * This will automatically create a controller instance on the server. In addition the model of this MVC group will
      * be created and synchronized between client and server. The layout of the view is defined by the FXML file "view.fxml".
-     * The superclass {@link AbstractFXMLViewBinder} will automatically load the given FXML file and render the layout.
+     * The superclass {@link AbstractFXMLViewController} will automatically load the given FXML file and render the layout.
      * @param clientContext the global client context
      */
     public MyView(ClientContext clientContext) {
