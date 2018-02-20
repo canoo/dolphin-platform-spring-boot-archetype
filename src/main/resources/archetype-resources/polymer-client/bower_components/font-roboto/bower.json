@@ -1,25 +1,22 @@
 {
-  "name": "font-roboto-local",
-  "version": "1.0.1",
-  "homepage": "https://github.com/PolymerElements/font-roboto-local",
+  "name": "font-roboto",
+  "version": "1.0.3",
+  "description": "An HTML import for Roboto",
   "authors": [
-    "The Polymer Project Authors"
+    "The Polymer Authors"
   ],
-  "description": "An HTML Import for Robot, with local font files",
-  "main": "roboto.html",
   "keywords": [
     "font",
     "roboto"
   ],
-  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PolymerElements/font-roboto.git"
+  },
+  "main": "roboto.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/PolymerElements/font-roboto/",
   "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests",
-    "update-fonts.sh",
-    "generate-style.js",
-    "demo.html"
+    "/.*"
   ]
 }
